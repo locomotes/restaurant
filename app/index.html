@@ -20,6 +20,8 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <!-- adding google map api -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
   <body>
     <header>
@@ -37,14 +39,14 @@
         <div id="middlecontainer">
             <div id="news">Latest News</div>
             <div id="specials">Today's Special</div>
-            <div id="location">Our Location</div>
+            <div id="location">
+    <div id="map_canvas"></div>Our Location</div>
         </div>
         <div id="bottomcontainer">
             <div id="menu">Our Dinner Selection</div>
             <div id="flickr">Food Photos from Flickr</div>
         </div>
       </div>
-    </div>
     <footer>
         <div id="footercontainer">
         © 2014 Restaurant Name
@@ -62,6 +64,7 @@
         <script type="text/template" id="menuTemplate"></script>
         <script src="scripts/main.js"></script>
         <script src="scripts/main.js"></script>
+        <script src="scripts/mapAPI.js"></script>
         <!-- endbuild -->
 </body>
 </html>

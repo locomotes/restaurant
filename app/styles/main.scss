@@ -4,6 +4,7 @@
 
 // Custom Styles
 
+
 @mixin border {
   border: 1px solid red;
 }
@@ -100,4 +101,13 @@ footer {
 
 
 
-// text
+
+
+#map_canvas {
+  // width: 500px;
+  height: 300px;
+  width: 280px;
+  // background-color: #CCC;
+  // opacity:15%;
+}
+
