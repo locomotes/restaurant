@@ -9,9 +9,16 @@
   border: 1px solid red;
 }
 
+.header-image{
+  width:900px;
+  position:absolute;
+}
+
+
+
 header {
   @include outer-container;
-  height: 400px;
+  height: 500px;
   #headcontainer {
     @include span-columns(10);
     @include shift(1);
@@ -21,7 +28,7 @@ header {
       height: 75px;
       width: 200px;
       @include border;
-      float: left;
+      position:relative;
     }
     #socialcontainer {
       height: 75px;
