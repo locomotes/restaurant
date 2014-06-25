@@ -22,28 +22,34 @@
     <!-- endbuild -->
   </head>
   <body>
-
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-
-        <li>Sass</li>
-
-
-        <li>Modernizr</li>
-
-
-        <li>Bourbon & Neat</li>
-
-
-        <li>UnderscoreJS</li>
-
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
+    <header>
+        <div id="headcontainer">
+            <div id="logocontainer">
+                <div id="logo">LOGO</div>
+            </div>
+            <div id="socialcontainer">
+                <div id="social">SOCIAL ICONS</div>
+            </div>
+        </div>
+    </header> 
+    <div id="main">
+      <div id="maincontainer">
+        <div id="middlecontainer">
+            <div id="news">Latest News</div>
+            <div id="specials">Today's Special</div>
+            <div id="location">Our Location</div>
+        </div>
+        <div id="bottomcontainer">
+            <div id="menu">Our Dinner Selection</div>
+            <div id="flickr">Food Photos from Flickr</div>
+        </div>
+      </div>
     </div>
+    <footer>
+        <div id="footercontainer">
+        © 2014 Restaurant Name
+        </div>
+    </footer>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -53,6 +59,8 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script type="text/template" id="menuTemplate"></script>
+        <script src="scripts/main.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
