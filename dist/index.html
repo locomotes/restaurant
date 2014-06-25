@@ -7,19 +7,11 @@
     <title>restaurant</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/vendor.css"/>
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/main.css"/>
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="../bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+    <script src="scripts/vendor/modernizr.js"></script>
     <!-- adding google map api -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
@@ -40,7 +32,8 @@
         <div id="middlecontainer">
             <div id="news">Latest News</div>
             <div id="specials">Today's Special</div>
-            <div id="location">Our Location<div id="map_canvas"></div></div>
+            <div id="location">
+    <div id="map_canvas"></div>Our Location</div>
         </div>
         <div id="bottomcontainer">
             <div id="menu">Our Dinner Selection</div>
@@ -54,20 +47,8 @@
     </footer>
 
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/underscore/underscore.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="scripts/vendor.js"></script>
 
-        <!-- build:js scripts/main.js -->
-
-        <script type="text/template" id="menuTemplate"></script>
-        <script type="text/template" id="flikrTemplate"></script>
-        <script src="scripts/menu.js"></script>
-        <script src="scripts/flickr.js"></script>
-        <script src="scripts/mapAPI.js"></script>
-        <!-- endbuild -->
+        <script src="scripts/main.js"></script>
 </body>
 </html>
