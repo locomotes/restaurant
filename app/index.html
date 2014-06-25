@@ -24,26 +24,21 @@
   <body>
 
     <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
+    
+    <p>testing</p> 
 
-        <li>Sass</li>
+    <div id="box"></div>
 
 
-        <li>Modernizr</li>
-
-
-        <li>Bourbon & Neat</li>
-
-
-        <li>UnderscoreJS</li>
-
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
     </div>
+
+    <script type="text/template" id="box_template">
+        <div class="food"><%= item =%></div>
+
+
+    </script>
+
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -51,6 +46,9 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+
+<script src="scripts/restaurantapi.js"></script>
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
