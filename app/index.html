@@ -55,7 +55,12 @@
             </div>
         </div>
         <div id="bottomcontainer">
-            <div id="menu">Our Dinner Selection</div>
+            <div id="menu">Our Dinner Selection
+                 <div id="box"></div>
+                <div id="box2"></div>
+                <div id="box3"></div>
+            </div>
+            
             <div id="flickr">Food Photos from Flickr</div>
         </div>
       </div>
@@ -66,12 +71,30 @@
     </footer>
 
 
+
+
+    <script type="text/template" id="box_template">
+        <div class="food"><%= item %></div>
+        <div class="desc"><%= description  %></div>
+        <div class="item"><%= price  %></div>
+        <div class="aller"><%= allergies  %></div>
+        <div class="fav"><%= favorite  %></div>
+        <div class="spcy"><%= spicy  %></div>
+        <div class="vegan"><%= vegan  %></div>
+        <div class="entreesid"><%= id  %></div>
+    </script>
+
+
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+
+<script src="scripts/restaurantapi.js"></script>
 
         <!-- build:js scripts/main.js -->
         <script type="text/template" id='newsTemplate'>

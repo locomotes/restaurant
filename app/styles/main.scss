@@ -14,7 +14,6 @@
   position:absolute;
 }
 
-
 header {
   @include outer-container;
   height: 500px;
@@ -60,8 +59,7 @@ header {
   #maincontainer {
     @include span-columns(10);
     @include shift(1);
-    height: 875px; 
-    @include border;
+    @include border 
     #middlecontainer {
       margin-top: 20px;
       @include outer-container;
@@ -83,12 +81,7 @@ header {
         text-align: center;
         padding-top: 10px;
         @include border;
-        // &:hover {
-        //   color:transparent;
-        //   a:link {
-        //         color:transparent;
-        //       }
-        // }
+       
         #map_canvas:hover + #locationInfo {
           color:transparent;
           a:link {
@@ -121,12 +114,10 @@ header {
       #menu {
         @include span-columns(7 of 10);
         @include border;
-        height: 500px;
       }
       #flickr {
         @include span-columns(3 of 10);
         @include border;
-        height: 500px;
       }
     }
   }
@@ -139,4 +130,25 @@ footer {
     @include border; 
     height: 80px; 
   }
+}
+
+.food {
+  color: blue;
+  border:solid green 3px;
+}
+
+
+.item {
+  color:red;
+}
+
+
+#box2 {
+  height: auto;
+  border: 1px solid blue;
+}
+
+#box3 {
+  height: auto;
+  border: 1px solid purple;
 }
