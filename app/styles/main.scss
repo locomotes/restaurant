@@ -117,14 +117,7 @@ header {
       #flickr {
         @include span-columns(3 of 10);
         @include border;
-<<<<<<< HEAD
-        // height: 500px;
-        text-align: center;
-        background-color: black;
-      } 
-=======
       }
->>>>>>> fabbe89f80f828bdd30a40734f52dbbfbaceffb2
     }
   }
 }
