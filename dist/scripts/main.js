@@ -27,6 +27,7 @@ function initialize () {
 	var map = new google.maps.Map(map_canvas, map_options)
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
 $('#restaurant-name').mouseenter(function(){
 	$(this).animate().html('Always a treat.');
 	$(this).animate().css('font-size','50px');
