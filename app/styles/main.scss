@@ -67,6 +67,18 @@ header {
         text-align: center;
         padding-top: 10px;
         @include border;
+        // &:hover {
+        //   color:transparent;
+        //   a:link {
+        //         color:transparent;
+        //       }
+        // }
+        #map_canvas:hover + #locationInfo {
+          color:transparent;
+          a:link {
+            color:transparent;
+          }
+          }
         #map_canvas {
             // width: 500px;
             height: 40%;
@@ -77,6 +89,12 @@ header {
             border-top: 1px grey solid;
             // background-color: #CCC;
             // opacity:15%;
+            &:hover {
+              width:101%;
+              height:105%;
+              margin-top: -30px;
+
+            }
           }
       }
     }
@@ -106,22 +124,3 @@ footer {
     height: 80px; 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
