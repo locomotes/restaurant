@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>restaurant</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+    <link href='http://fonts.googleapis.com/css?family=Sanchez|Pacifico' rel='stylesheet' type='text/css'>
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
@@ -29,11 +29,12 @@
         <div id="headcontainer">
             <img class="header-image" src="../images/restaurant.jpg"/>
             <div id="logocontainer">
-                <div id="logo">LOGO</div>
+                <div id="logo">¿MM?</div>
             </div>
             <div id="socialcontainer">
-                <div id="social">SOCIAL ICONS</div>
             </div>
+            <div id="restaurant-name">Mystery Meat</div>
+
         </div>
     </header> 
     <div id="main">
@@ -73,12 +74,18 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script type="text/template" id='newsTemplate'>
+        <p class='news-paragraph'><%=title%></p>
 
+        </script>
         <script type="text/template" id="menuTemplate"></script>
         <script type="text/template" id="flikrTemplate"></script>
         <script src="scripts/menu.js"></script>
         <script src="scripts/flickr.js"></script>
         <script src="scripts/mapAPI.js"></script>
-        <!-- endbuild -->
+        <script src="scripts/katlyn.js"></script>
+        <script src="scripts/newsdata.js"></script>
+
+                <!-- endbuild -->
 </body>
 </html>
