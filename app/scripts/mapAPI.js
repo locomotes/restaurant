@@ -16,3 +16,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 // })
 
 // ^^Check syntax, but this should work
+$('#map_canvas').hover(
+		function() {
+			$(this).addClass('hover');
+		}
