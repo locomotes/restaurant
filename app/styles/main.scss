@@ -64,7 +64,20 @@ header {
       #location {
         @include span-columns(3.33 of 10);
         height: 300px;
+        text-align: center;
+        padding-top: 10px;
         @include border;
+        #map_canvas {
+            // width: 500px;
+            height: 40%;
+            width: 85%;
+            margin: 0 auto;
+            margin-top: 50px;
+            // padding-top: 10px;
+            border-top: 1px grey solid;
+            // background-color: #CCC;
+            // opacity:15%;
+          }
       }
     }
     #bottomcontainer {
@@ -110,11 +123,5 @@ footer {
 
 
 
-#map_canvas {
-  // width: 500px;
-  height: 300px;
-  width: 280px;
-  // background-color: #CCC;
-  // opacity:15%;
-}
+
 
