@@ -7,19 +7,11 @@
     <title>restaurant</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/vendor.css"/>
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/main.css"/>
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="../bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+    <script src="scripts/vendor/modernizr.js"></script>
   </head>
   <body>
     <header>
@@ -43,6 +35,16 @@
             <div id="menu">Our Dinner Selection</div>
             <div id="flickr">
             Food Photos from Flickr
+            <style type="text/css"> 
+.flickr_badge_image {margin:0px;display:inline;}
+.flickr_badge_image img {border: 1px solid #666666 !important; padding:1px; margin:2px;}
+#flickr_badge_wrapper {width:245px;text-align:left}
+            </style>
+<div id="flickr_badge_wrapper">
+<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=5&display=latest&size=m&layout=x&source=group&group=80615166@N00">
+    
+</script>
+</div>
             </div>
         </div>
       </div>
@@ -53,18 +55,8 @@
         </div>
     </footer>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/underscore/underscore.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="scripts/vendor.js"></script>
 
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/flickr.js"></script>
-        <script type="text/template" id="menuTemplate"></script>
         <script src="scripts/main.js"></script>
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
 </body>
 </html>
