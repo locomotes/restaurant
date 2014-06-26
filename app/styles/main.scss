@@ -60,12 +60,18 @@ header {
         text-align: center;
         padding-top: 10px;
         @include border;
-        &:hover {
+        // &:hover {
+        //   color:transparent;
+        //   a:link {
+        //         color:transparent;
+        //       }
+        // }
+        #map_canvas:hover + #locationInfo {
           color:transparent;
           a:link {
-                color:transparent;
-              }
-        }
+            color:transparent;
+          }
+          }
         #map_canvas {
             // width: 500px;
             height: 40%;
