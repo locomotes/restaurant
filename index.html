@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>restaurant</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href='http://fonts.googleapis.com/css?family=Sanchez|Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/vendor.css"/>
+
+    <link rel="stylesheet" href="styles/main.css"/>
+
+    <script src="scripts/vendor/modernizr.js"></script>
+    <!-- adding google map api -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+  </head>
+  <body>
+
+    <header>
+        <div id="headcontainer">
+            <img class="header-image" src="../images/restaurant.jpg"/>
+            <div id="logocontainer">
+                <div id="logo">¿MM?</div>
+            </div>
+            <div id="socialcontainer">
+            </div>
+            <div id="restaurant-name">Mystery Meat</div>
+
+        </div>
+    </header> 
+    <div id="main">
+      <div id="maincontainer">
+        <div id="middlecontainer">
+            <div id="news">Latest News</div>
+            <div id="specials">Today's Special</div>
+            <div id="location">Our Location
+                <div id="map_canvas"></div>
+                <div id="locationInfo">
+                    <span id='address'>11101 41st Ave,  Flushing, NY 11368</span>
+                    <br />
+                    <span id='contactInfo'>XXX-YYY-ZZZZ     XXX-YYY-ZZZZ    
+                        <a href='http://www.example.com'>Map   </a>
+                        <a href='http://www.example.com'>Directions</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="bottomcontainer">
+            <div id="menu">Our Dinner Selection
+                 <div id="box"></div>
+                <div id="box2"></div>
+                <div id="box3"></div>
+            </div>
+            
+            <div id="flickr">Food Photos from Flickr</div>
+        </div>
+      </div>
+    <footer>
+        <div id="footercontainer">
+        © 2014 Restaurant Name
+        </div>
+    </footer>
+
+
+
+
+    <script type="text/template" id="box_template">
+        <div class="food"><%= item %></div>
+        <div class="desc"><%= description  %></div>
+        <div class="item"><%= price  %></div>
+        <div class="aller"><%= allergies  %></div>
+        <div class="fav"><%= favorite  %></div>
+        <div class="spcy"><%= spicy  %></div>
+        <div class="vegan"><%= vegan  %></div>
+        <div class="entreesid"><%= id  %></div>
+    </script>
+
+
+
+    <script src="scripts/vendor.js"></script>
+
+
+<script src="scripts/restaurantapi.js"></script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>
