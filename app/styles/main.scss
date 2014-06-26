@@ -14,8 +14,6 @@
   position:absolute;
 }
 
-
-
 header {
   @include outer-container;
   height: 500px;
@@ -93,6 +91,7 @@ header {
         @include span-columns(3 of 10);
         @include border;
         height: 500px;
+        text-align: center;
       } 
     }
   }
