@@ -1,3 +1,9 @@
+var menuTemplate=_.template( $('#menuTemplate').html() );
+
+var content= $.getJSON('http://restaurantapi.apiary.io/').done( function (data){
+	$('#menu').html( menuTemplate(data));
+});
+<<<<<<< HEAD
 // $(function(){
 // 	jQuery('#a-link').remove();   
 	
@@ -28,5 +34,20 @@
 
 $.getJSON('http://api.flickr.com/services/rest/?format=json&method=flickr.photos.search&tags=seafood&tag_mode=all&api_key=[391b7344255a48ba1f7460ed1bc02a49]', function (data){
 	$("#columnone").append('#flickr');
-});
+=======
+var flikrTemplate=_.template( $('#flikrTemplate').html() );
 
+var images= $.getJSON('http://restaurantapi.apiary.io/').done( function (data){
+	$('#flikrImages').html(flikrTemplate(data));
+>>>>>>> e709fc051ca30a22fc7933710dd9a658a3a895d8
+});
+function initialize () {
+	var map_canvas = document.getElementById('map_canvas');
+	var map_options = {
+		center: new google.maps.LatLng(40.751132, -73.855449),
+		zoom: 15,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map = new google.maps.Map(map_canvas, map_options)
+}
+google.maps.event.addDomListener(window, 'load', initialize);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // $(function(){
 // 	jQuery('#a-link').remove();   
 	
@@ -28,4 +29,10 @@
 
 $.getJSON('http://api.flickr.com/services/rest/?format=json&method=flickr.photos.search&tags=seafood&tag_mode=all&api_key=[391b7344255a48ba1f7460ed1bc02a49]', function (data){
 	$("#columnone").append('#flickr');
+=======
+var flikrTemplate=_.template( $('#flikrTemplate').html() );
+
+var images= $.getJSON('http://restaurantapi.apiary.io/').done( function (data){
+	$('#flikrImages').html(flikrTemplate(data));
+>>>>>>> e709fc051ca30a22fc7933710dd9a658a3a895d8
 });
