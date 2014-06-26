@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 	
 	// //assign your api key equal to a variable
@@ -27,10 +27,4 @@
       });
     });
 })();
-=======
-// var flikrTemplate=_.template( $('#flikrTemplate').html() );
 
-// var images= $.getJSON('http://restaurantapi.apiary.io/').done( function (data){
-// 	$('#flikrImages').html(flikrTemplate(data));
-// });
->>>>>>> c3c6a99e7f331859b1ba2e9adcd1df0c299d92fa
