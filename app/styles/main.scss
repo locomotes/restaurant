@@ -30,8 +30,10 @@ header {
       font-family: 'Pacifico', cursive;
       font-size:60px;
       padding-left:25px;
-      
-
+    }
+    #logo{
+      transform: rotate(-25deg);
+      padding-right:90px;
     }
     #socialcontainer {
       height: 75px;
