@@ -15,7 +15,6 @@
 }
 
 
-
 header {
   @include outer-container;
   height: 500px;
@@ -23,12 +22,14 @@ header {
     @include span-columns(10);
     @include shift(1);
     height: 400px;
-    @include border;
     #logocontainer {
       height: 75px;
       width: 200px;
-      @include border;
       position:relative;
+      color:yellow;
+      font-family: 'Lobster', cursive;
+      font-size:80px;
+      padding-left:25px;
     }
     #socialcontainer {
       height: 75px;
@@ -38,6 +39,8 @@ header {
     }
   }
 }
+
+
 #main{
   @include outer-container;
   height: 500px;
