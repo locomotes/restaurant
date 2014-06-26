@@ -26,16 +26,29 @@ header {
       height: 75px;
       width: 200px;
       position:relative;
-      color:yellow;
-      font-family: 'Lobster', cursive;
-      font-size:80px;
+      color:black;
+      font-family: 'Pacifico', cursive;
+      font-size:60px;
       padding-left:25px;
+      
+
     }
     #socialcontainer {
       height: 75px;
       width: 200px;
       @include border;
       float: right;
+    }
+    #restaurant-name{
+      width:800px;
+      position:relative;
+      color:yellow;
+      font-size:70px;
+      float:right;
+      padding-top:200px;
+      padding-left:300px;
+      font-family: 'Sanchez', serif;
+      opacity:0.6;
     }
   }
 }
