@@ -60,6 +60,12 @@ header {
         text-align: center;
         padding-top: 10px;
         @include border;
+        &:hover {
+          color:transparent;
+          a:link {
+                color:transparent;
+              }
+        }
         #map_canvas {
             // width: 500px;
             height: 40%;
@@ -70,7 +76,12 @@ header {
             border-top: 1px grey solid;
             // background-color: #CCC;
             // opacity:15%;
+            &:hover {
+              width:100%;
+              height:100%;
+              margin-top: -30px;
 
+            }
           }
       }
     }
@@ -100,24 +111,3 @@ footer {
     height: 80px; 
   }
 }
-
-
-
-// .animate().html('<div id='location'><div id='map_canvas'></div></div>)
-
-// ^^ hmmm nuh-uh
-
-
-#map_canvas:hover {
-  height: 100%;
-  width: 100%;
-}
-
-// ^^Yeeeahh somethin like dat, uh-huh
-
-
-
-
-
-
-
