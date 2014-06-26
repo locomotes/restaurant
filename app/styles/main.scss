@@ -21,12 +21,16 @@ header {
     @include span-columns(10);
     @include shift(1);
     height: 400px;
-    @include border;
     #logocontainer {
       height: 75px;
       width: 200px;
-      @include border;
       position:relative;
+      color:black;
+      font-family: 'Pacifico', cursive;
+      font-size:60px;
+      padding-left:25px;
+      
+
     }
     #socialcontainer {
       height: 75px;
@@ -34,8 +38,21 @@ header {
       @include border;
       float: right;
     }
+    #restaurant-name{
+      width:800px;
+      position:relative;
+      color:yellow;
+      font-size:70px;
+      float:right;
+      padding-top:200px;
+      padding-left:300px;
+      font-family: 'Sanchez', serif;
+      opacity:0.6;
+    }
   }
 }
+
+
 #main{
   @include outer-container;
   height: 500px;
@@ -65,6 +82,18 @@ header {
         text-align: center;
         padding-top: 10px;
         @include border;
+        // &:hover {
+        //   color:transparent;
+        //   a:link {
+        //         color:transparent;
+        //       }
+        // }
+        #map_canvas:hover + #locationInfo {
+          color:transparent;
+          a:link {
+            color:transparent;
+          }
+          }
         #map_canvas {
             // width: 500px;
             height: 40%;
@@ -75,6 +104,12 @@ header {
             border-top: 1px grey solid;
             // background-color: #CCC;
             // opacity:15%;
+            &:hover {
+              width:101%;
+              height:105%;
+              margin-top: -30px;
+
+            }
           }
       }
     }
@@ -105,22 +140,3 @@ footer {
     height: 80px; 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
