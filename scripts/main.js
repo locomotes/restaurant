@@ -27,10 +27,13 @@ function initialize () {
 	var map = new google.maps.Map(map_canvas, map_options)
 }
 google.maps.event.addDomListener(window, 'load', initialize);
-$('#logo').mouseenter(function(){
-	$(this).animate().html('Mystery Meat');
+$('#restaurant-name').mouseenter(function(){
+	$(this).animate().html('Always a treat.');
+	$(this).animate().css('font-size','50px');
 	$(this).mouseleave(function(){
-	$(this).animate().html('¿MM?');	
+	$(this).animate({},'slow').html('Mystery Meat');
+	$(this).animate().css('font-size','70px')	
+
 	});
 });
 var news= {
