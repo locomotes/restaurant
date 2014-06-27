@@ -80,7 +80,7 @@ header {
         #map_canvas:hover + #locationInfo {
           color:transparent;
           a:link {
-            color:transparent;
+          color:transparent;
           }
           }
         #map_canvas {
@@ -144,4 +144,8 @@ footer {
 #box3 {
   height: auto;
   border: 1px solid purple;
+}
+
+#locationInfo{
+  color:blue;
 }
