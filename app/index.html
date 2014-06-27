@@ -60,6 +60,8 @@
                 <div id="box"><span class="appetizers-title"><br>Appetizers</span></div>
                 <div id="box2"><span class="main-dishes-title"><br>Main Dishes</span></div>
                 <div id="box3"><span class="sides-title"><br>Sides</span></div>
+                <div id="menu-icons"></div>
+
             </div>
             
             <div id="flickr"><span class="flickr-title">Food Photos from Flickr</span>
@@ -79,13 +81,25 @@
         <div class="food"><%= item %></div>
         <div class="item"><%= price  %></div>
         <div class="desc"><%= description  %></div>
-        <div class="aller"><%= allergies  %></div>
-        <div class="fav"><%= favorite  %></div>
-        <div class="spcy"><%= spicy  %></div>
-        <div class="vegan"><%= vegan  %></div>
-        <div class="entreesid"><%= id  %></div>
-    </script>
 
+        <% if (allergies===1){ %>
+            <span class="allergies-icon">-allergies-</span>
+        <% } %>
+
+        <% if (spicy===1){ %>
+            <span class="allergies-icon">-spicy-</span>
+        <% } %>
+
+        <% if (favorite===1){ %>
+            <span class="allergies-icon">-favorite-</span>
+        <% } %>
+
+        <% if (vegan===1){ %>
+            <span class="allergies-icon">-vegan-</span>
+        <% } %>
+
+
+    </script>
 
 
     <!-- build:js scripts/vendor.js -->

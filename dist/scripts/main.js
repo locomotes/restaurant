@@ -20,6 +20,10 @@ $.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
 
  	});
 
+ 	_.each(menu.appetizers, function(a){
+ 		
+ 	})
+
 });
 
 
