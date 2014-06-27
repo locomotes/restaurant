@@ -4,8 +4,15 @@
 
 // Custom Styles
 
+@mixin titles{
+  font-size:23px;
+  font-family: 'Sanchez', serif;
+}
 
-
+@mixin links{
+  color:green;
+  text-decoration:none
+}
 
 .header-image{
   width:900px;
@@ -60,14 +67,33 @@ header {
       margin-top: 20px;
       @include outer-container;
       height: 300px; 
+      .map-link{
+        @include links
+      }
+      .directions-link{
+        @include links
+      }
       #news {
         @include span-columns(3.33 of 10);
         height: 300px;
+        .news-title{
+          @include titles;
+        }
 
       }
+
+
+      }
+
+    }
+  
       #specials {
         @include span-columns(3.33 of 10);
         height: 300px;
+
+        .special-title{
+          @include titles;
+        }
 
       }
       #location {
@@ -75,7 +101,13 @@ header {
         height: 300px;
         text-align: center;
         padding-top: 10px;
+        font-family: 'PT Sans Narrow', sans-serif;
 
+
+         .location-title{
+          @include titles;
+        }
+      }
        
         #map_canvas:hover + #locationInfo {
           color:transparent;
@@ -101,51 +133,86 @@ header {
             }
           }
       }
-    }
-  }
-  }
+    
+    
+  
     #bottomcontainer {
       @include outer-container;
       margin-top: 50px;
       #menu {
         @include span-columns(7 of 10);
+        .menu-title{
+          font-family: 'Sanchez', serif;
+          font-size:30px;
+            }
+          .appetizers-title{
+            @include titles;
+            float:left;
+            width:200px;
+
+          }
+          .main-dishes-title{
+            @include titles;
+            float:left;
+            width:200px;
+            
+          }
+
+          .sides-title{
+            @include titles;
+            float:left;
+            width:200px;
+          }
+
+  
+        }
  
       }
       #flickr {
         @include span-columns(3 of 10);
+        .flickr-title{
+          @include titles;
+
+        }
  
       }
-    }
+
 footer {
   @include outer-container;
   #footercontainer {
     @include span-columns(10);
     @include shift(1);
-    height: 80px; 
+    height: 80px;
+    padding-top: 50px;
   }
 }
 
+
 .food {
-  color: blue;
-  border:solid green 3px;
+  color: grey;
+  font-family: 'Sanchez', serif;
+  width:510px;
+  float:left;
 }
 
 
 .item {
-  color:red;
+  color:grey;
+ float:right;
 }
 
+.desc{
+  clear:both;
+}
 
 #box2 {
   height: auto;
-  border: 1px solid blue;
+
+  
 }
 
 #box3 {
   height: auto;
-  border: 1px solid purple;
+  
 }
 
-#locationInfo{
-  color:blue;
-}

@@ -7,6 +7,7 @@
     <title>restaurant</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link href='http://fonts.googleapis.com/css?family=Sanchez|Pacifico' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/vendor.css"/>
 
     <link rel="stylesheet" href="styles/main.css"/>
@@ -32,33 +33,34 @@
     <div id="main">
       <div id="maincontainer">
         <div id="middlecontainer">
-            <div id="news">Latest News</div>
-            <div id="specials">Today's Special</div>
-            <div id="location">Our Location
+            <div id="news"><span class="news-title">Latest News</span></div>
+            <div id="specials"><span class="special-title">Today's Special</span></div>
+            <div id="location"><span class="location-title">Our Location</span>
                 <div id="map_canvas"></div>
                 <div id="locationInfo">
                     <span id='address'>11101 41st Ave,  Flushing, NY 11368</span>
                     <br />
-                    <span id='contactInfo'>XXX-YYY-ZZZZ     XXX-YYY-ZZZZ    
-                        <a href='http://www.example.com'>Map   </a>
-                        <a href='http://www.example.com'>Directions</a>
+                    <span id='contactInfo'>888-867-5309<br>   
+                        <a class="map-link" href='http://www.example.com'>Map</a><br>
+                        <a class="directions-link" href='http://www.example.com'>Directions</a>
                     </span>
                 </div>
             </div>
         </div>
         <div id="bottomcontainer">
-            <div id="menu">Our Dinner Selection
-                 <div id="box"></div>
-                <div id="box2"></div>
-                <div id="box3"></div>
+            <div id="menu"><span class="menu-title">Our Dinner Selection</span>
+                <div id="box"><span class="appetizers-title"><br>Appetizers</span></div>
+                <div id="box2"><span class="main-dishes-title"><br>Main Dishes</span></div>
+                <div id="box3"><span class="sides-title"><br>Sides</span></div>
             </div>
             
-            <div id="flickr">Food Photos from Flickr</div>
+            <div id="flickr"><span class="flickr-title">Food Photos from Flickr</span>
+            </div>
         </div>
       </div>
     <footer>
         <div id="footercontainer">
-        © 2014 Restaurant Name
+        © 2014 Mystery Meat
         </div>
     </footer>
 
@@ -67,8 +69,8 @@
 
     <script type="text/template" id="box_template">
         <div class="food"><%= item %></div>
-        <div class="desc"><%= description  %></div>
         <div class="item"><%= price  %></div>
+        <div class="desc"><%= description  %></div>
         <div class="aller"><%= allergies  %></div>
         <div class="fav"><%= favorite  %></div>
         <div class="spcy"><%= spicy  %></div>
