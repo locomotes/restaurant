@@ -115,6 +115,8 @@ header {
       #flickr {
         @include span-columns(3 of 10);
         @include border;
+        text-align: center;
+        background-color: black;
       }
     }
   }
