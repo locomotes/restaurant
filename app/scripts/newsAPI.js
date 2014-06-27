@@ -43,12 +43,21 @@ Content-Type: application/json
 
 
 
-// gonna try working with Terry's box template
+// templating??
 
-var template = _.template( $('#newsTemplate').html() );
+var template2 = _.template( $('#newsTemplate').html() );
 
 $.getJSON('http://restaurantapi.apiary-mock.com/news/latest', function (data) {
-	_.each(data.post_id, function (a) {
-		$('#newsBox').append( template( a ));
-	});
+	// _.each(data.post_id, function (a) {
+		$('#newsBox').append( template2( data ));
+	// });
 });
+
+
+// var template = _.template( $('#newsTemplate').html() );
+
+// $.getJSON('http://restaurantapi.apiary-mock.com/news/latest', function (data) {
+// 	_.each(data.post_id, function (a) {
+// 		$('#newsBox').console.log(a);
+// 	});
+// });
