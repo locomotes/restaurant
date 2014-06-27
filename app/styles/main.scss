@@ -3,24 +3,215 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+
+@mixin titles{
+  font-size:23px;
+  font-family: 'Sanchez', serif;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+@mixin links{
+  color:green;
+  text-decoration:none
+}
+
+.header-image{
+  width:900px;
+  position:absolute;
+}
+
+header {
+  @include outer-container;
+  height: 500px;
+  #headcontainer {
+    @include span-columns(10);
+    @include shift(1);
+    height: 400px;
+    #logocontainer {
+      height: 75px;
+      width: 200px;
+      position:relative;
+      color:black;
+      font-family: 'Pacifico', cursive;
+      font-size:60px;
+      padding-left:25px;
+    }
+    #socialcontainer {
+      height: 75px;
+      width: 200px;
+      float: right;
+    }
+    #restaurant-name{
+      width:800px;
+      position:relative;
+      color:yellow;
+      font-size:70px;
+      float:right;
+      padding-top:200px;
+      padding-left:300px;
+      font-family: 'Sanchez', serif;
+      opacity:0.6;
+    }
   }
 }
+
+
+#main{
+  @include outer-container;
+  height: 500px;
+  #maincontainer {
+    @include span-columns(10);
+    @include shift(1);
+    #middlecontainer {
+      margin-top: 20px;
+      @include outer-container;
+      height: 300px; 
+      .map-link{
+        @include links
+      }
+      .directions-link{
+        @include links
+      }
+      #news {
+        @include span-columns(3.33 of 10);
+        height: 300px;
+        .news-title{
+          @include titles;
+        }
+
+      }
+
+
+      }
+
+    }
+  
+      #specials {
+        @include span-columns(3.33 of 10);
+        height: 300px;
+
+        .special-title{
+          @include titles;
+        }
+
+      }
+      #location {
+        @include span-columns(3.33 of 10);
+        height: 300px;
+        text-align: center;
+        padding-top: 10px;
+        font-family: 'PT Sans Narrow', sans-serif;
+
+
+         .location-title{
+          @include titles;
+        }
+      }
+       
+        #map_canvas:hover + #locationInfo {
+          color:transparent;
+          a:link {
+          color:transparent;
+          }
+          }
+        #map_canvas {
+            // width: 500px;
+            height: 40%;
+            width: 85%;
+            margin: 0 auto;
+            margin-top: 50px;
+            // padding-top: 10px;
+            border-top: 1px grey solid;
+            // background-color: #CCC;
+            // opacity:15%;
+            &:hover {
+              width:101%;
+              height:105%;
+              margin-top: -30px;
+
+            }
+          }
+      }
+    
+    
+  
+    #bottomcontainer {
+      @include outer-container;
+      margin-top: 50px;
+      #menu {
+        @include span-columns(7 of 10);
+        .menu-title{
+          font-family: 'Sanchez', serif;
+          font-size:30px;
+            }
+          .appetizers-title{
+            @include titles;
+            float:left;
+            width:200px;
+
+          }
+          .main-dishes-title{
+            @include titles;
+            float:left;
+            width:200px;
+            
+          }
+
+          .sides-title{
+            @include titles;
+            float:left;
+            width:200px;
+          }
+
+  
+        }
+ 
+      }
+      #flickr {
+        @include span-columns(3 of 10);
+        text-align: center;
+        background-color: black;
+        .flickr-title{
+          @include titles;
+        }
+      }
+
+footer {
+  @include outer-container;
+  #footercontainer {
+    @include span-columns(10);
+    @include shift(1);
+    height: 80px;
+    padding-top: 50px;
+  }
+}
+
+
+.food {
+  color: grey;
+  font-family: 'Sanchez', serif;
+  width:510px;
+  float:left;
+}
+
+
+.item {
+  color:grey;
+ float:right;
+}
+
+.desc{
+  clear:both;
+}
+
+#box2 {
+  height: auto;
+
+  
+}
+
+#box3 {
+  height: auto;
+}
+
+  
+
