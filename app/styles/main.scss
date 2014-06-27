@@ -38,11 +38,13 @@ header {
       @include border;
       float: right;
       margin-right: 5px;
-      .fa-twitter-square {
-        font-size: 14px;
-        color: yellow;
-      }
     }
+    .social {
+      font-size: 40px;
+      color: yellow;
+      float: right;
+    }
+
     #restaurant-name{
       width:800px;
       position:relative;
@@ -53,6 +55,7 @@ header {
       font-family: 'Sanchez', serif;
       opacity:0.6;
       float: right;
+      margin-right: 10px;
     }
   }
 }
