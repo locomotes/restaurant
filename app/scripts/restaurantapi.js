@@ -20,6 +20,12 @@ $.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
 
  	});
 
+_.each(menu.appetizers, function(fooditem){
+	if(appetizers.allergies===1){
+	$('#box').append( template(fooditem) );
+};
+});
+
 });
 
 
