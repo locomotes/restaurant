@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-console.log('The Iron Yard Rocks');
-=======
 var template = _.template( $('#box_template').html() );
 
 $.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
@@ -96,4 +93,3 @@ function initialize () {
 	var map = new google.maps.Map(map_canvas, map_options)
 }
 google.maps.event.addDomListener(window, 'load', initialize);
->>>>>>> 9a6f46ee749ebf1b184f1b16d7ec09277e917773

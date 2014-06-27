@@ -6,46 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>restaurant</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-<<<<<<< HEAD
-
-=======
     <link href='http://fonts.googleapis.com/css?family=Sanchez|Pacifico' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
->>>>>>> 9a6f46ee749ebf1b184f1b16d7ec09277e917773
     <link rel="stylesheet" href="styles/vendor.css"/>
 
     <link rel="stylesheet" href="styles/main.css"/>
 
     <script src="scripts/vendor/modernizr.js"></script>
-<<<<<<< HEAD
-  </head>
-  <body>
-
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-
-        <li>Sass</li>
-
-
-        <li>Modernizr</li>
-
-
-        <li>Bourbon & Neat</li>
-
-
-        <li>UnderscoreJS</li>
-
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
-    </div>
-
-    <script src="scripts/vendor.js"></script>
-
-=======
     <!-- adding google map api -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
@@ -66,7 +33,10 @@
     <div id="main">
       <div id="maincontainer">
         <div id="middlecontainer">
-            <div id="news"><span class="news-title">Latest News</span></div>
+            <div id="news"><span class="news-title">Latest News</span>
+                <div id="newsBox">
+                </div>
+            </div>
             <div id="specials"><span class="special-title">Today's Special</span></div>
             <div id="location"><span class="location-title">Our Location</span>
                 <div id="map_canvas"></div>
@@ -111,6 +81,11 @@
         <div class="entreesid"><%= id  %></div>
     </script>
 
+    <script type="text/template" id="newsTemplate">
+        <div class="post_id"><%= post_id  %></div>
+        <div class="title"><%= title  %></div>
+        <div class="post"><%= post  %></div>
+    </script>
 
 
     <script src="scripts/vendor.js"></script>
@@ -118,7 +93,6 @@
 
 
 
->>>>>>> 9a6f46ee749ebf1b184f1b16d7ec09277e917773
         <script src="scripts/main.js"></script>
 </body>
 </html>
