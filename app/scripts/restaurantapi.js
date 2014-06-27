@@ -22,6 +22,8 @@ $.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
 
 });
 
+
+
  
 //  var template = _.template( $('#box2_template').html() );
 

@@ -22,6 +22,8 @@ $.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
 
 });
 
+
+
  
 //  var template = _.template( $('#box2_template').html() );
 
@@ -50,20 +52,6 @@ $.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
 // });
 
 
-// var menuTemplate=_.template( $('#menuTemplate').html() );
-
-// var content= $.getJSON('http://restaurantapi.apiary.io/').done( function (data){
-// 	$('#menu').html( menuTemplate(data));
-// });
-
-var newsTemplate=_.template( $('#newsTemplate').html() );
-
-function stuff(a){
-	$('#news').html( newsTemplate(a) );
-
-}
-
-console.log(stuff(news));
 
 
 	
@@ -105,13 +93,3 @@ function initialize () {
 	var map = new google.maps.Map(map_canvas, map_options)
 }
 google.maps.event.addDomListener(window, 'load', initialize);
-
-$('#restaurant-name').mouseenter(function(){
-	$(this).animate().html('Always a treat.');
-	$(this).animate().css('font-size','50px');
-	$(this).mouseleave(function(){
-	$(this).animate({},'slow').html('Mystery Meat');
-	$(this).animate().css('font-size','70px')	
-
-	});
-});
