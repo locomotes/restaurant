@@ -1,3 +1,55 @@
+var template = _.template( $('#box_template').html() );
+
+$.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
+
+	_.each(menu.appetizers, function(fooditem){
+	
+		$('#box').append( template(fooditem) );
+
+ 	});
+
+ 	_.each(menu.entrees, function(fooditem){
+	
+		$('#box2').append( template(fooditem) );
+
+ 	});
+
+ 	_.each(menu.sides, function(fooditem){
+	
+		$('#box3').append( template(fooditem) );
+
+ 	});
+
+});
+
+ 
+//  var template = _.template( $('#box2_template').html() );
+
+// $.getJSON('http://restaurantapi.apiary.io/menu', function (data){
+
+// 	_.each(data.item, function(description){
+	
+// 		$('#box2').append( template(description) );
+
+//  	});
+
+// });
+
+
+ 
+//  var template = _.template( $('#box3_template').html() );
+
+// $.getJSON('http://restaurantapi.apiary.io/menu', function (data){
+
+// 	_.each(data.id, function(id){
+	
+// 		$('#box3').append( template(id) );
+
+//  	});
+
+// });
+
+
 // var menuTemplate=_.template( $('#menuTemplate').html() );
 
 // var content= $.getJSON('http://restaurantapi.apiary.io/').done( function (data){
@@ -63,9 +115,3 @@ $('#restaurant-name').mouseenter(function(){
 
 	});
 });
-var news= {
-    "post_id": 13,
-    "title": "Acorn Finished Pork",
-    "post": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-}

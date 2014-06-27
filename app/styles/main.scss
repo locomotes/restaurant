@@ -5,9 +5,7 @@
 // Custom Styles
 
 
-@mixin border {
-  border: 1px solid red;
-}
+
 
 .header-image{
   width:900px;
@@ -33,7 +31,6 @@ header {
     #socialcontainer {
       height: 75px;
       width: 200px;
-      @include border;
       float: right;
     }
     #restaurant-name{
@@ -61,23 +58,22 @@ header {
       margin-top: 20px;
       @include outer-container;
       height: 300px; 
-      @include border;
       #news {
         @include span-columns(3.33 of 10);
         height: 300px;
-        @include border;
+
       }
       #specials {
         @include span-columns(3.33 of 10);
         height: 300px;
-        @include border;
+
       }
       #location {
         @include span-columns(3.33 of 10);
         height: 300px;
         text-align: center;
         padding-top: 10px;
-        @include border;
+
        
         #map_canvas:hover + #locationInfo {
           color:transparent;
@@ -104,29 +100,26 @@ header {
           }
       }
     }
+  }
+  }
     #bottomcontainer {
       @include outer-container;
       margin-top: 50px;
-      @include border;
       #menu {
         @include span-columns(7 of 10);
-        @include border;
+ 
       }
       #flickr {
         @include span-columns(3 of 10);
-        @include border;
         text-align: center;
         background-color: black;
       }
     }
-  }
-}
 footer {
   @include outer-container;
   #footercontainer {
     @include span-columns(10);
     @include shift(1);
-    @include border; 
     height: 80px; 
   }
 }
