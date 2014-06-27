@@ -41,7 +41,10 @@
     <div id="main">
       <div id="maincontainer">
         <div id="middlecontainer">
-            <div id="news"><span class="news-title">Latest News</span></div>
+            <div id="news"><span class="news-title">Latest News</span>
+                <div id="newsBox">
+                </div>
+            </div>
             <div id="specials"><span class="special-title">Today's Special</span></div>
             <div id="location"><span class="location-title">Our Location</span>
                 <div id="map_canvas"></div>
@@ -86,6 +89,11 @@
         <div class="entreesid"><%= id  %></div>
     </script>
 
+    <script type="text/template" id="newsTemplate">
+        <div class="post_id"><%= post_id  %></div>
+        <div class="title"><%= title  %></div>
+        <div class="post"><%= post  %></div>
+    </script>
 
 
     <!-- build:js scripts/vendor.js -->
