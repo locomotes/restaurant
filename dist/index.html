@@ -61,7 +61,7 @@
             
             <div id="flickr"><span class="flickr-title">Food Photos from Flickr</span>
             </div>
-        </div>
+        </div>  
       </div>
     <footer>
         <div id="footercontainer">
@@ -73,28 +73,30 @@
 
 
     <script type="text/template" id="box_template">
-        <div class="top-line">
             <div class="food"><%= item %></div>
-            <div class="item"><%= price  %></div><br>  
+        
+        <div class="right-menu-items">
+            <div class="item"><%= price  %></div>
+            <div class="icons">
+                <% if (allergies===1){ %>
+                <span class="allergies-icon">-allergies-</span>
+                <% } %>
+
+                <% if (spicy===1){ %>
+                <span class="spicy-icon">-spicy-</span>
+                <% } %>
+
+                <% if (favorite===1){ %>
+                <span class="favorite-icon">-favorite-</span>
+                <% } %>
+
+                <% if (vegan===1){ %>
+                <span class="vegan-icon">-vegan-</span>
+                <% } %>
+            </div>
         </div>
         <div class="desc"><%= description  %></div>
-        <div class="icons">
-            <% if (allergies===1){ %>
-                <span class="allergies-icon">-allergies-</span>
-            <% } %>
-
-            <% if (spicy===1){ %>
-                <span class="spicy-icon">-spicy-</span>
-            <% } %>
-
-            <% if (favorite===1){ %>
-                <span class="favorite-icon">-favorite-</span>
-            <% } %>
-
-            <% if (vegan===1){ %>
-                <span class="vegan-icon">-vegan-</span>
-            <% } %>
-        </div>
+       
 
     </script>
 

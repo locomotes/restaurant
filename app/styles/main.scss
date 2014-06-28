@@ -162,7 +162,7 @@ header {
           .main-dishes-title{
             @include titles;
             float:left;
-            width:200px;
+            height:50px;
             
           }
 
@@ -200,8 +200,9 @@ footer {
 .food {
   color: grey;
   font-family: 'Sanchez', serif;
-  width:510px;
+  width:530px;
   float:left;
+
 }
 
 
@@ -211,8 +212,9 @@ footer {
 }
 
 .desc{
-  clear:both;
   font-size:11px;
+  float:left;
+  width:400px;
 }
 
 #box2 {
@@ -227,6 +229,9 @@ footer {
 
 .icons{
   float:right;
+  clear:both;
+  font-size:10px;
+  display:inline-block;
 }
   
 
