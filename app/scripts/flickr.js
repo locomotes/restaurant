@@ -22,7 +22,7 @@
       $.each( data.items, function( i, item ) {
         $( "<img>" ).attr( "src", item.media.m ).appendTo( "#flickr" );
         if ( i === 5 ) {
-          return false;
+          return true;
         }
       });
     });
