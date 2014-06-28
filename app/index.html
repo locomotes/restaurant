@@ -64,7 +64,6 @@
                 <div id="box"><span class="appetizers-title"><br>Appetizers</span></div>
                 <div id="box2"><span class="main-dishes-title"><br>Main Dishes</span></div>
                 <div id="box3"><span class="sides-title"><br>Sides</span></div>
-                <div id="menu-icons"></div>
 
             </div>
             
@@ -82,26 +81,28 @@
 
 
     <script type="text/template" id="box_template">
-        <div class="food"><%= item %></div>
-        <div class="item"><%= price  %></div>
+        <div class="top-line">
+            <div class="food"><%= item %></div>
+            <div class="item"><%= price  %></div><br>  
+        </div>
         <div class="desc"><%= description  %></div>
+        <div class="icons">
+            <% if (allergies===1){ %>
+                <span class="allergies-icon">-allergies-</span>
+            <% } %>
 
-        <% if (allergies===1){ %>
-            <span class="allergies-icon">-allergies-</span>
-        <% } %>
+            <% if (spicy===1){ %>
+                <span class="spicy-icon">-spicy-</span>
+            <% } %>
 
-        <% if (spicy===1){ %>
-            <span class="spicy-icon">-spicy-</span>
-        <% } %>
+            <% if (favorite===1){ %>
+                <span class="favorite-icon">-favorite-</span>
+            <% } %>
 
-        <% if (favorite===1){ %>
-            <span class="favorite-icon">-favorite-</span>
-        <% } %>
-
-        <% if (vegan===1){ %>
-            <span class="vegan-icon">-vegan-</span>
-        <% } %>
-
+            <% if (vegan===1){ %>
+                <span class="vegan-icon">-vegan-</span>
+            <% } %>
+        </div>
 
     </script>
 
