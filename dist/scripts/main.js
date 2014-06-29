@@ -1,3 +1,22 @@
+
+var special = "http://restaurantapi.apiary.io/menu/special";
+var menu = "http://restaurantapi.apiary.io/menu";
+$.getJSON(special, function (data) {
+	var special_id = data.menu_item_id;
+	$.getJSON(menu, function (data) {
+		data.entrees.forEach(function(a) {
+			if (a.id === special_id) {
+				$("#specialname").append( a.item + "..........." );
+				$("#specialprice").append( a.price );
+				$("#specialtwo").append( a.description );
+			}
+		});
+	});	
+});
+
+
+// console.log(a.item);
+// $("#specials").append( a.item );
 var template = _.template( $('#box_template').html() );
 
 $.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
@@ -19,6 +38,10 @@ $.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
 		$('#box3').append( template(fooditem) );
 
  	});
+
+ 	_.each(menu.appetizers, function(a){
+ 		
+ 	})
 
 });
 
@@ -52,6 +75,21 @@ $.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
 // });
 
 
+var template = _.template( $('#box_template').html() );
+
+var special_id;
+
+var logme = function (a) {
+console.log(a);
+};
+
+$.getJSON('http://restaurantapi.apiary.io/menu/special').done( function (data) {
+
+  special_id = data.menu_item_id;
+
+  logme(special_id);
+
+});
 
 
 	
@@ -74,15 +112,31 @@ $.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
   })
     .done(function( data ) {
       $.each( data.items, function( i, item ) {
-        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#flickr" );
-        if ( i === 5 ) {
-          return false;
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#flickrcontainer" );
+        if ( i === 3 ) {
+          return true;
         }
       });
     });
 })();
 
-
+(function() {
+  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "seafood",
+    tagmode: "any",
+    format: "json",
+    size: "h"
+  })
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#specialimage" );
+        if ( i === 1 ) {
+          return true;
+        }
+      });
+    });
+})();
 function initialize () {
 	var map_canvas = document.getElementById('map_canvas');
 	var map_options = {
@@ -163,4 +217,11 @@ var template2 = _.template( $('#newsTemplate').html() );
 
 $.getJSON('http://restaurantapi.apiary-mock.com/news/latest', function (data) {
 		$('#newsBox').append( template2( data ));
+});
+
+$('#restaurant-name').mouseenter(function(){
+	$(this).animate().html('Always a treat').css('font-size','60px');
+	$(this).mouseleave(function(){
+		$(this).animate().html('Mystery Meat').css('font-size','70px');
+	});
 });
