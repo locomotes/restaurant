@@ -163,6 +163,7 @@ header {
             @include titles;
             float:left;
             height:50px;
+            clear:both;
             
           }
 
@@ -170,6 +171,7 @@ header {
             @include titles;
             float:left;
             width:200px;
+            clear:both;
           }
 
   
