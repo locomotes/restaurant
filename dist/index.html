@@ -56,11 +56,12 @@
                 <div id="box"><span class="appetizers-title"><br>Appetizers</span></div>
                 <div id="box2"><span class="main-dishes-title"><br>Main Dishes</span></div>
                 <div id="box3"><span class="sides-title"><br>Sides</span></div>
+
             </div>
             
             <div id="flickr"><span class="flickr-title">Food Photos from Flickr</span>
             </div>
-        </div>
+        </div>  
       </div>
     <footer>
         <div id="footercontainer">
@@ -72,16 +73,32 @@
 
 
     <script type="text/template" id="box_template">
-        <div class="food"><%= item %></div>
-        <div class="item"><%= price  %></div>
-        <div class="desc"><%= description  %></div>
-        <div class="aller"><%= allergies  %></div>
-        <div class="fav"><%= favorite  %></div>
-        <div class="spcy"><%= spicy  %></div>
-        <div class="vegan"><%= vegan  %></div>
-        <div class="entreesid"><%= id  %></div>
-    </script>
+            <div class="food"><%= item %></div>
+        
+        <div class="right-menu-items">
+            <div class="item"><%= price  %></div>
+            <div class="icons">
+                <% if (allergies===1){ %>
+                <span class="allergies-icon">-allergies-</span>
+                <% } %>
 
+                <% if (spicy===1){ %>
+                <span class="spicy-icon">-spicy-</span>
+                <% } %>
+
+                <% if (favorite===1){ %>
+                <span class="favorite-icon">-favorite-</span>
+                <% } %>
+
+                <% if (vegan===1){ %>
+                <span class="vegan-icon">-vegan-</span>
+                <% } %>
+            </div>
+        </div>
+        <div class="desc"><%= description  %></div>
+       
+
+    </script>
 
 
     <script src="scripts/vendor.js"></script>
