@@ -45,13 +45,13 @@ Content-Type: application/json
 
 // templating??
 
-var template2 = _.template( $('#newsTemplate').html() );
+// var template2 = _.template( $('#newsTemplate').html() );
 
-$.getJSON('http://restaurantapi.apiary-mock.com/news/latest', function (data) {
-	// _.each(data.post_id, function (a) {
-		$('#newsBox').append( template2( data ));
-	// });
-});
+// $.getJSON('http://restaurantapi.apiary-mock.com/news/latest', function (data) {
+// 	// _.each(data.post_id, function (a) {
+// 		$('#newsBox').append( template2( data ));
+// 	// });
+// });
 
 
 // var template = _.template( $('#newsTemplate').html() );
@@ -61,3 +61,10 @@ $.getJSON('http://restaurantapi.apiary-mock.com/news/latest', function (data) {
 // 		$('#newsBox').console.log(a);
 // 	});
 // });
+
+
+var template2 = _.template( $('#newsTemplate').html() );
+
+$.getJSON('http://restaurantapi.apiary-mock.com/news/latest', function (data) {
+		$('#newsBox').append( template2( data ));
+});

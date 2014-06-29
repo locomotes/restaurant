@@ -213,5 +213,12 @@ footer {
   height: auto;
 }
 
-  
 
+
+div.post {
+  height: 300px;
+  background-color: green;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
