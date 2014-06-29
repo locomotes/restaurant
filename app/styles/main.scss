@@ -227,9 +227,10 @@ header {
         height: 750px;
         .flickr-title{
           @include titles;
+
         }
         #flickrcontainer {
-          background-color: black;
+          background-color: white;
           height: 720px;
           width: 250px;
           overflow: hidden;
