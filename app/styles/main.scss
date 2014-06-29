@@ -210,7 +210,7 @@ header {
       #flickr {
         @include span-columns(3 of 10);
         text-align: center;
-        max-height: 1950px;
+        max-height: 720px;
         .flickr-title{
           @include titles;
         }
