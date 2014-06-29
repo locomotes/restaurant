@@ -210,13 +210,13 @@ header {
       #flickr {
         @include span-columns(3 of 10);
         text-align: center;
-        max-height: 720px;
+        height: 750px;
         .flickr-title{
           @include titles;
         }
         #flickrcontainer {
           background-color: black;
-          height: 1900px;
+          height: 720px;
           width: 250px;
           overflow: hidden;
         }
