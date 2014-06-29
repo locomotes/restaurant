@@ -28,6 +28,7 @@ header {
     height: 400px;
     background-image: url(../images/restaurant.jpg);
     background-size: 100%;
+
     #logocontainer {
       height: 75px;
       width: 200px;
@@ -37,6 +38,16 @@ header {
       padding-left:25px;
       float: left;
     }
+
+    .meat-img{
+      width:90px;
+      position:relative;
+      background-color:#d1bc00;
+      border-radius:100px;  
+      height:90px;
+    }
+
+
     #socialcontainer {
       height: 75px;
       width: 200px;
@@ -44,24 +55,25 @@ header {
       margin-right: 5px;
     }
     .social {
-      font-size: 40px;
-      color: yellow;
+      font-size: 22px;
+      color: #c21300;
       float: right;
+      margin:10px;
     }
 
-    #restaurant-name{
-      width:800px;
-      position:relative;
-      color:yellow;
-      font-size:70px;
-      padding-top:200px;
-      padding-left:300px;
-      font-family: 'Sanchez', serif;
-      opacity:0.6;
-      float: right;
-      margin-right: 10px;
-    }
+    #restaurant-name {
+    width: 516px;
+    position: relative;
+    color: #d1bc00;
+    font-size: 70px;
+    margin-top: 200px;
+    font-family: 'Sanchez', serif;
+    float: right;
+    margin-right: 10px;
+    font-size: 70px;
+    background: rgba(0, 0, 0, 0.5);
   }
+ }
 }
 
 
@@ -185,13 +197,14 @@ header {
             @include titles;
             float:left;
             width:200px;
+            padding-bottom:20px;
 
           }
           .main-dishes-title{
             @include titles;
             float:left;
-            height:50px;
             clear:both;
+            padding-bottom:20px;
             
           }
 
@@ -200,6 +213,7 @@ header {
             float:left;
             width:200px;
             clear:both;
+            padding-bottom:20px;
           }
 
   
@@ -251,12 +265,12 @@ footer {
   font-size:11px;
   float:left;
   width:400px;
+  padding-bottom:20px;
 }
 
 #box2 {
   height: auto;
 
-  
 }
 
 #box3 {
@@ -268,8 +282,58 @@ footer {
   clear:both;
   font-size:10px;
   display:inline-block;
+  position:relative;
+}
+
+@mixin info_boxes{
+  position:absolute;
+  width:300px;
+  background-color:gray;
+  color:white;
+  padding:10px;
+  font-size:12px;
+}
+
+@mixin info-boxes-titles{
+  font-size:15px;
+
 }
 
 
+.allergy-info-box-title{
+  @include info-boxes-titles;
+}
+.allergy-info-box{
+  @include info_boxes;
+}
+
+.spicy-info-box-title{
+  @include info-boxes-titles;
+}
+
+.spicy-info-box{
+  @include info_boxes;
+}
+
+.favorite-info-box-title{
+  @include info-boxes-titles;
+}
+
+.favorite-info-box{
+  @include info_boxes;
+}
+
+.vegan-info-box-title{
+  @include info-boxes-titles;
+}
+
+.vegan-info-box{
+  @include info_boxes;
+}
+
+
+
+
   
+
 
