@@ -158,13 +158,22 @@ header {
             margin: 0 auto;
             margin-top: 50px;
             // padding-top: 10px;
-            border-top: 1px grey solid;
+            // border-top: 1px grey solid;
             // background-color: #CCC;
             // opacity:15%;
+            transition: all .25s ease;
+              -webkit-transition: all .25s ease;
+                -moz-transition: all .25s ease;
+                  -o-transition: all .25s ease;
             &:hover {
               width:101%;
               height:105%;
               margin-top: -30px;
+              transition: all .25s ease;
+                -webkit-transition: all .25s ease;
+                  -moz-transition: all .25s ease;
+                    -o-transition: all .25s ease;
+              // @include transition(all .25s ease-in-out);
 
             }
           }
@@ -273,3 +282,8 @@ footer {
 
   
 
+div.post {
+  height: 290px;
+  overflow:scroll;
+
+}

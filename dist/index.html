@@ -37,7 +37,10 @@
     <div id="main">
       <div id="maincontainer">
         <div id="middlecontainer">
-            <div id="news"><span class="news-title">Latest News</span></div>
+
+            <div id="news"><span class="news-title">Latest News</span>
+            <div id="newsBox">
+                </div></div>
             <div id="specials">
                 <span class="special-title">Today's Special</span>
                 <div id="specialimage"></div>
@@ -47,6 +50,7 @@
                 </div>
                 <div id="specialtwo"></div>
             </div>
+
             <div id="location"><span class="location-title">Our Location</span>
                 <div id="map_canvas"></div>
                 <div id="locationInfo">
@@ -105,9 +109,14 @@
             </div>
         </div>
         <div class="desc"><%= description  %></div>
+    </script>
        
 
-    </script>
+ <script type="text/template" id="newsTemplate">
+        <div class="title" "truncate"><%= title  %></div>
+        <div class="post"><%= post  %></div>
+</script>
+
 
 
     <script src="scripts/vendor.js"></script>
