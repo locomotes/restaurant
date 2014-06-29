@@ -98,9 +98,37 @@ header {
       #specials {
         @include span-columns(3.33 of 10);
         height: 300px;
-
         .special-title{
           @include titles;
+        }
+        #specialimage {
+          width: 280px;
+          height: 120px;
+          margin-top: 15px;
+          overflow: hidden;
+          text-align: left;
+        }
+        #specialone {
+          width: 280px;
+          height: 35px;
+          margin-top: 10px;
+          #specialname {
+            width: 245px;
+            height: 30px;
+            float: left;
+            overflow: hidden;
+           
+          }
+          #specialprice {
+            width: 30px;
+            height: 30px;
+            float: left;
+          }
+        }
+        #specialtwo {
+          width: 280px;
+          height: 75px;
+          overflow: hidden;
         }
 
       }
@@ -182,9 +210,15 @@ header {
       #flickr {
         @include span-columns(3 of 10);
         text-align: center;
-        background-color: black;
+        max-height: 1950px;
         .flickr-title{
           @include titles;
+        }
+        #flickrcontainer {
+          background-color: black;
+          height: 1900px;
+          width: 250px;
+          overflow: hidden;
         }
       }
 
