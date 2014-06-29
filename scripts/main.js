@@ -148,7 +148,6 @@ function initialize () {
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
-<<<<<<< HEAD
 /*
 Request:
 
@@ -219,11 +218,10 @@ var template2 = _.template( $('#newsTemplate').html() );
 $.getJSON('http://restaurantapi.apiary-mock.com/news/latest', function (data) {
 		$('#newsBox').append( template2( data ));
 });
-=======
+
 $('#restaurant-name').mouseenter(function(){
 	$(this).animate().html('Always a treat').css('font-size','60px');
 	$(this).mouseleave(function(){
 		$(this).animate().html('Mystery Meat').css('font-size','70px');
 	});
 });
->>>>>>> staging
