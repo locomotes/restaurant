@@ -97,3 +97,10 @@ function initialize () {
 	var map = new google.maps.Map(map_canvas, map_options)
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
+$('#restaurant-name').mouseenter(function(){
+	$(this).animate().html('Always a treat').css('font-size','60px');
+	$(this).mouseleave(function(){
+		$(this).animate().html('Mystery Meat').css('font-size','70px');
+	});
+});
