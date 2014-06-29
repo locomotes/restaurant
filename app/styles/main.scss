@@ -120,7 +120,7 @@ header {
             margin: 0 auto;
             margin-top: 50px;
             // padding-top: 10px;
-            border-top: 1px grey solid;
+            // border-top: 1px grey solid;
             // background-color: #CCC;
             // opacity:15%;
             &:hover {
@@ -216,9 +216,7 @@ footer {
 
 
 div.post {
-  height: 300px;
-  background-color: green;
-  overflow:hidden;
-  text-overflow: ellipsis;
-  white-space:nowrap;
+  height: 290px;
+  overflow:scroll;
+
 }
