@@ -4,14 +4,19 @@
 
 // Custom Styles
 
+$yellow: #d1bc00;
+$red:#c21300;
+$narrowfont:'PT Sans Narrow', sans-serif;
+
+
 @mixin titles{
   font-size:23px;
   font-family: 'Sanchez', serif;
 }
 
 @mixin links{
-  color:green;
-  text-decoration:none
+  color:$red;
+  text-decoration:none;
 }
 
 .header-image{
@@ -42,9 +47,10 @@ header {
     .meat-img{
       width:90px;
       position:relative;
-      background-color:#d1bc00;
+      background-color:$yellow;
       border-radius:100px;  
       height:90px;
+      opacity:0.9;
     }
 
 
@@ -56,15 +62,19 @@ header {
     }
     .social {
       font-size: 22px;
-      color: #c21300;
+      color: $red;
       float: right;
       margin:10px;
+    }
+
+    .social:hover{
+      color:$yellow;
     }
 
     #restaurant-name {
     width: 516px;
     position: relative;
-    color: #d1bc00;
+    color: $yellow;
     font-size: 70px;
     margin-top: 200px;
     font-family: 'Sanchez', serif;
@@ -98,6 +108,7 @@ header {
         height: 300px;
         .news-title{
           @include titles;
+
         }
 
       }
@@ -129,18 +140,24 @@ header {
             height: 30px;
             float: left;
             overflow: hidden;
+            font-family: 'Sanchez', serif;
+            color:grey;
            
           }
           #specialprice {
             width: 30px;
             height: 30px;
             float: left;
+            color:grey;
+
           }
         }
         #specialtwo {
           width: 280px;
           height: 75px;
           overflow: hidden;
+          font-size:12px;
+
         }
 
       }
@@ -149,7 +166,7 @@ header {
         height: 300px;
         text-align: center;
         //padding-top: 10px;
-        font-family: 'PT Sans Narrow', sans-serif;
+        font-family: $narrowfont;
 
 
          .location-title{
@@ -253,6 +270,8 @@ footer {
     @include shift(1);
     height: 80px;
     padding-top: 50px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size:13px;
   }
 }
 
@@ -262,9 +281,7 @@ footer {
   font-family: 'Sanchez', serif;
   width:530px;
   float:left;
-
 }
-
 
 .item {
   color:grey;
@@ -302,6 +319,7 @@ footer {
   color:black;
   padding:10px;
   font-size:12px;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 @mixin info-boxes-titles{
@@ -344,4 +362,5 @@ footer {
 div.post {
   height: 290px;
   overflow:scroll;
+  font-size:12px;
 }

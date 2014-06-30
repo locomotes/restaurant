@@ -27,3 +27,6 @@ _List any other resources you may use in this project._
 
 Header image from:
 http://www.nytimes.com/2007/09/14/nyregion/14diner.html?pagewanted=all&_r=0
+
+Logo image from:
+http://3.bp.blogspot.com/_rGWDT3XjvxY/THxTPeIXDqI/AAAAAAAAABc/YWtwOEuuKJw/s1600/food-icon-meat.gif
