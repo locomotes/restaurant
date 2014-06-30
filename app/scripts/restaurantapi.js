@@ -53,11 +53,11 @@ $('.vegan-icon').hover(function () {
 //   }); 
 // });
 
-_each(menu.entrees, function(a) {
+_.each(menu.entrees, function(a) {
 
 $.getJSON(special, function (data) {
   var special_id = data.menu_item_id;
- _each(menu.entrees, function(a) {
+ _.each(menu.entrees, function(a) {
       if (a.id === special_id) {
         $("#specialname").append( a.item + "..........." );
         $("#specialprice").append( a.price );
