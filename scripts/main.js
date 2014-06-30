@@ -162,7 +162,7 @@ $.getJSON('http://restaurantapi.apiary.io/menu/special').done( function (data) {
 (function() {
   var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
   $.getJSON( flickerAPI, {
-    tags: "seafood",
+    tags: "steak",
     tagmode: "any",
     format: "json",
     size: "h"
@@ -180,7 +180,7 @@ $.getJSON('http://restaurantapi.apiary.io/menu/special').done( function (data) {
 (function() {
   var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
   $.getJSON( flickerAPI, {
-    tags: "seafood",
+    tags: "steak",
     tagmode: "any",
     format: "json",
     size: "h"
