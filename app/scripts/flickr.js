@@ -34,7 +34,7 @@
     tags: "steak",
     tagmode: "any",
     format: "json",
-    size: "h"
+    size: "s"
   })
     .done(function( data ) {
       $.each( data.items, function( i, item ) {

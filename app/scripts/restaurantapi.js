@@ -31,7 +31,7 @@ $.getJSON('http://restaurantapi.apiary.io/menu', function (menu){
 
 $('.allergies-icon').hover(function () {
     
-    $(this).append('<div class="allergy-info-box">' + '<span class="allergy-info-box-title">Allergies</span><br>' +  allergy_info + '</div>');
+    $(this).append('<div class="allergy-info-box">' + '<div class="allergy-info-box-title">Allergies</div><br>' +  allergy_info + '</div>');
   
   }, function () {
   
@@ -44,7 +44,7 @@ var spicy_info = "This item is spicy, please handle with care and drink lots of 
 
 $('.spicy-icon').hover(function () {
     
-    $(this).append('<div class="spicy-info-box">' + '<span class="spicy-info-box-title">Spicy!</span><br>' + spicy_info + '</div>');
+    $(this).append('<div class="spicy-info-box">' + '<div class="spicy-info-box-title">Spicy!</div><br>' + spicy_info + '</div>');
   
   }, function () {
   
@@ -57,7 +57,7 @@ $('.spicy-icon').hover(function () {
 
 $('.favorite-icon').hover(function () {
     
-    $(this).append('<div class="favorite-info-box">' + '<span class="favorite-info-box-title">A Favorite!</span><br>' + favorite_info + '</div>');
+    $(this).append('<div class="favorite-info-box">' + '<div class="favorite-info-box-title">A Favorite!</div><br>' + favorite_info + '</div>');
   
   }, function () {
   
@@ -72,7 +72,7 @@ $('.favorite-icon').hover(function () {
 
 $('.vegan-icon').hover(function () {
     
-    $(this).append('<div class="vegan-info-box">' + '<span class="vegan-info-box-title">Vegan Option</span><br>' + vegan_info + '</div>');
+    $(this).append('<div class="vegan-info-box">' + '<div class="vegan-info-box-title">Vegan Option</div><br>' + vegan_info + '</div>');
   
   }, function () {
   

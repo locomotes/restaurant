@@ -12,6 +12,7 @@ $narrowfont:'PT Sans Narrow', sans-serif;
 @mixin titles{
   font-size:23px;
   font-family: 'Sanchez', serif;
+  color:$red;
 }
 
 @mixin links{
@@ -133,13 +134,13 @@ header {
           height: 120px;
           margin-top: 50px;
           overflow: hidden;
-          text-align: left;
+          text-align: center;
 
         }
         #specialone {
           width: 280px;
           height: 35px;
-          margin-top: 10px;
+          margin-top: 20px;
           #specialname {
             width: 245px;
             height: 30px;
@@ -256,18 +257,21 @@ header {
       #flickr {
         @include span-columns(3 of 10);
         text-align: center;
-        height: 750px;
+        height: 800px;
         .flickr-title{
           @include titles;
           padding-top:50px;
-          padding-bottom:50px;
+          padding-bottom:30px;
 
         }
         #flickrcontainer {
           background-color: white;
-          height: 720px;
+          height: 770px;
           width: 250px;
           overflow: hidden;
+          img {
+            margin: 20px;
+          }
         }
       }
 
@@ -285,7 +289,7 @@ footer {
 
 
 .food {
-  color: grey;
+  color:grey;
   font-family: 'Sanchez', serif;
   width:530px;
   float:left;
@@ -323,15 +327,17 @@ footer {
 @mixin info_boxes{
   position:absolute;
   width:300px;
-  background-color:#d1d1d1;
+  background-color:white;
   color:black;
   padding:10px;
   font-size:12px;
   font-family: 'PT Sans Narrow', sans-serif;
+  border:4px ridge $yellow; 
 }
 
 @mixin info-boxes-titles{
   font-size:15px;
+  border-bottom:1.5px dotted $yellow;
 
 }
 
@@ -341,6 +347,7 @@ footer {
 }
 .allergy-info-box{
   @include info_boxes;
+
 }
 
 .spicy-info-box-title{
