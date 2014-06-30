@@ -108,6 +108,8 @@ header {
         height: 300px;
         .news-title{
           @include titles;
+          text-align:center;  
+
 
         }
 
@@ -123,13 +125,16 @@ header {
         height: 300px;
         .special-title{
           @include titles;
+          text-align:center;
+
         }
         #specialimage {
           width: 280px;
           height: 120px;
-          margin-top: 15px;
+          margin-top: 50px;
           overflow: hidden;
           text-align: left;
+
         }
         #specialone {
           width: 280px;
@@ -218,6 +223,7 @@ header {
         .menu-title{
           font-family: 'Sanchez', serif;
           font-size:30px;
+          padding-top:40px;
             }
           .appetizers-title{
             @include titles;
@@ -253,6 +259,8 @@ header {
         height: 750px;
         .flickr-title{
           @include titles;
+          padding-top:50px;
+          padding-bottom:50px;
 
         }
         #flickrcontainer {
@@ -315,7 +323,7 @@ footer {
 @mixin info_boxes{
   position:absolute;
   width:300px;
-  background-color:#d1bc00;
+  background-color:#d1d1d1;
   color:black;
   padding:10px;
   font-size:12px;
@@ -363,4 +371,10 @@ div.post {
   height: 290px;
   overflow:scroll;
   font-size:12px;
+}
+
+.title{
+  color:grey;
+  font-family: 'Sanchez', serif;
+  padding-top:35px;
 }
