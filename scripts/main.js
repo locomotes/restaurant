@@ -171,7 +171,7 @@ $.getJSON('http://restaurantapi.apiary.io/menu/special').done( function (data) {
       $.each( data.items, function( i, item ) {
         $( "<img>" ).attr( "src", item.media.m ).appendTo( "#flickrcontainer" );
         if ( i === 3 ) {
-          return true;
+          return false;
         }
       });
     });
@@ -183,13 +183,13 @@ $.getJSON('http://restaurantapi.apiary.io/menu/special').done( function (data) {
     tags: "steak",
     tagmode: "any",
     format: "json",
-    size: "s"
+    size: "l"
   })
     .done(function( data ) {
       $.each( data.items, function( i, item ) {
         $( "<img>" ).attr( "src", item.media.m ).appendTo( "#specialimage" );
-        if ( i === 1 ) {
-          return true;
+        if ( i === 0 ) {
+          return false;
         }
       });
     });
