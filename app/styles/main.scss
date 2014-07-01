@@ -3,24 +3,413 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+
+$yellow: #d1bc00;
+$red:#c21300;
+$narrowfont:'PT Sans Narrow', sans-serif;
+
+
+@mixin titles{
+  font-size:23px;
+  font-family: 'Sanchez', serif;
+  color:$red;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+@mixin links{
+  color:$red;
+  text-decoration:none;
+}
+
+.header-image{
+  width:900px;
+  position:absolute;
+}
+
+header {
+  @include outer-container;
+  height: 500px;
+  #headcontainer {
+    @include span-columns(10);
+    @include shift(1);
+    height: 400px;
+    background-image: url(../images/restaurant.jpg);
+    background-size: 100%;
+
+    #logocontainer {
+      height: 75px;
+      width: 200px;
+      color:black;
+      font-family: 'Pacifico', cursive;
+      font-size:60px;
+      padding-left:25px;
+      float: left;
+    }
+
+    .meat-img{
+      width:90px;
+      position:relative;
+      background-color:$yellow;
+      border-radius:100px;  
+      height:90px;
+      opacity:0.9;
+    }
+
+
+    #socialcontainer {
+      height: 75px;
+      width: 200px;
+      float: right;
+      margin-right: 5px;
+    }
+    .social {
+      font-size: 22px;
+      color: $red;
+      float: right;
+      margin:10px;
+    }
+
+    .social:hover{
+      color:$yellow;
+    }
+
+    #restaurant-name {
+    width: 516px;
+    position: relative;
+    color: $yellow;
+    font-size: 70px;
+    margin-top: 200px;
+    font-family: 'Sanchez', serif;
+    float: right;
+    margin-right: 10px;
+    font-size: 70px;
+    background: rgba(0, 0, 0, 0.5);
   }
+ }
+}
+
+
+#main{
+  @include outer-container;
+  height: 500px;
+  #maincontainer {
+    @include span-columns(10);
+    @include shift(1);
+    #middlecontainer {
+      margin-top: 20px;
+      @include outer-container;
+      height: 300px; 
+      .map-link{
+        @include links
+      }
+      .directions-link{
+        @include links
+      }
+      #news {
+        @include span-columns(3.33 of 10);
+        height: 300px;
+        @media (max-width:600px){
+          overflow:hidden;
+        }
+        .news-title{
+          @include titles;
+          text-align:center;  
+
+
+        }
+
+      }
+
+
+      }
+
+    }
+  
+      #specials {
+        @include span-columns(3.33 of 10);
+        height: 300px;
+        .special-title{
+          @include titles;
+          text-align:center;
+        }
+        #specialimage {
+          width: 280px;
+          height: 120px;
+          margin-top: 50px;
+          overflow: hidden;
+          text-align: center;
+          @media (max-width:600px){
+             max-width:100%;
+            max-height:100%;
+            overflow:scroll;
+          }
+
+        }
+        #specialone {
+          width: 280px;
+          height: 35px;
+          margin-top: 20px;
+          #specialname {
+            width: 245px;
+            height: 30px;
+            float: left;
+            overflow: hidden;
+            font-family: 'Sanchez', serif;
+            color:grey;
+            @media (max-width:600px){
+              max-width:100%;
+              max-height:100%;
+              overflow:scroll;
+            }
+           
+          }
+          #specialprice {
+            width: 30px;
+            height: 30px;
+            float: left;
+            color:grey;
+            @media (max-width:600px){
+              max-width:100%;
+              max-height:100%;
+              overflow:scroll;
+          }
+        }
+        #specialtwo {
+          width: 280px;
+          height: 75px;
+          overflow: hidden;
+          font-size:12px;
+          @media (max-width:600px){
+            max-width:100%;
+            max-height:100%;
+            overflow:scroll;
+          }
+
+        }
+
+      }
+    }
+      #location {
+        @include span-columns(3.33 of 10);
+        height: 300px;
+        text-align: center;
+        //padding-top: 10px;
+        font-family: $narrowfont;
+
+
+         .location-title{
+          @include titles;
+        }
+      }
+       
+        #map_canvas:hover + #locationInfo {
+          color:transparent;
+          a:link {
+          color:transparent;
+          }
+          }
+        #map_canvas {
+            // width: 500px;
+            height: 40%;
+            width: 85%;
+            margin: 0 auto;
+            margin-top: 50px;
+            // padding-top: 10px;
+            // border-top: 1px grey solid;
+            // background-color: #CCC;
+            // opacity:15%;
+            transition: all .25s ease;
+              -webkit-transition: all .25s ease;
+                -moz-transition: all .25s ease;
+                  -o-transition: all .25s ease;
+            &:hover {
+              width:101%;
+              height:105%;
+              margin-top: -30px;
+              transition: all .25s ease;
+                -webkit-transition: all .25s ease;
+                  -moz-transition: all .25s ease;
+                    -o-transition: all .25s ease;
+              // @include transition(all .25s ease-in-out);
+
+            }
+          }
+      }
+    
+    
+  
+    #bottomcontainer {
+      @include outer-container;
+      margin-top: 50px;
+      #menu {
+        @include span-columns(7 of 10);
+        .menu-title{
+          font-family: 'Sanchez', serif;
+          font-size:30px;
+          padding-top:40px;
+            }
+          .appetizers-title{
+            @include titles;
+            float:left;
+            width:200px;
+            padding-bottom:20px;
+
+          }
+          .main-dishes-title{
+            @include titles;
+            float:left;
+            clear:both;
+            padding-bottom:20px;
+            
+          }
+
+          .sides-title{
+            @include titles;
+            float:left;
+            width:200px;
+            clear:both;
+            padding-bottom:20px;
+          }
+
+  
+        }
+ 
+      }
+
+      #flickr {
+        @include span-columns(3 of 10);
+        text-align: center;
+        height: 800px;
+        .flickr-title{
+          @include titles;
+          padding-top:50px;
+          padding-bottom:30px;
+
+        }
+        #flickrcontainer {
+          background-color: white;
+          height: 770px;
+          width: 250px;
+          overflow: hidden;
+          img {
+            margin: 20px;
+            max-width: 100%;
+
+          }
+        }
+      }
+          @media (max-width:600px){
+            #flickr{
+              display:none;
+            }
+        }
+
+footer {
+  @include outer-container;
+  #footercontainer {
+    @include span-columns(10);
+    @include shift(1);
+    height: 80px;
+    padding-top: 50px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size:13px;
+  }
+}
+
+
+.food {
+  color:grey;
+  font-family: 'Sanchez', serif;
+  width:530px;
+  float:left;
+}
+
+.item {
+  color:grey;
+ float:right;
+}
+
+.desc{
+  font-size:11px;
+  float:left;
+  width:400px;
+  padding-bottom:20px;
+}
+
+#box2 {
+  height: auto;
+
+}
+
+#box3 {
+  height: auto;
+}
+
+.icons{
+  float:right;
+  clear:both;
+  font-size:10px;
+  display:inline-block;
+  position:relative;
+}
+
+@mixin info_boxes{
+  position:absolute;
+  width:300px;
+  background-color:white;
+  color:black;
+  padding:10px;
+  font-size:12px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  border:4px ridge $yellow; 
+}
+
+@mixin info-boxes-titles{
+  font-size:15px;
+  border-bottom:1.5px dotted $yellow;
+
+}
+
+
+.allergy-info-box-title{
+  @include info-boxes-titles;
+}
+.allergy-info-box{
+  @include info_boxes;
+
+}
+
+.spicy-info-box-title{
+  @include info-boxes-titles;
+}
+
+.spicy-info-box{
+  @include info_boxes;
+}
+
+.favorite-info-box-title{
+  @include info-boxes-titles;
+}
+
+.favorite-info-box{
+  @include info_boxes;
+}
+
+.vegan-info-box-title{
+  @include info-boxes-titles;
+}
+
+.vegan-info-box{
+  @include info_boxes;
+}
+
+div.post {
+  height: 290px;
+  overflow:scroll;
+  font-size:12px;
+}
+
+.title{
+  color:grey;
+  font-family: 'Sanchez', serif;
+  padding-top:35px;
 }
