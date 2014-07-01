@@ -12,7 +12,7 @@ $.getJSON(special, function (data) {
 			}
 		});
 	});	
-});
+}); 
 
 
 // console.log(a.item);
