@@ -1,31 +1,21 @@
 var template = _.template( $('#box_template').html() );
 var special = "http://restaurantapi.apiary.io/menu/special";
-<<<<<<< HEAD
-var menus = "http://restaurantapi.apiary.io/menu";
-
-$.getJSON(menu, function (menu){
-=======
 var menuurl = "http://restaurantapi.apiary.io/menu";
 
 $.getJSON(menuurl, function (menu){
->>>>>>> clean
-	_.each(menu.appetizers, function(fooditem){
-		$('#box').append( template(fooditem) );
- 	});
- 	_.each(menu.entrees, function(fooditem){
-		$('#box2').append( template(fooditem) );
- 	});
- 	_.each(menu.sides, function(fooditem){
-		$('#box3').append( template(fooditem) );
- 	});
- 	_.each(menu.appetizers, function(a){
- 	})
-<<<<<<< HEAD
-}).done(function(){
-=======
+  _.each(menu.appetizers, function(fooditem){
+    $('#box').append( template(fooditem) );
+  });
+  _.each(menu.entrees, function(fooditem){
+    $('#box2').append( template(fooditem) );
+  });
+  _.each(menu.sides, function(fooditem){
+    $('#box3').append( template(fooditem) );
+  });
+  _.each(menu.appetizers, function(a){
+  })
 }).done(function(menu){
->>>>>>> clean
-	var allergy_info = "This item may contain shellfish or another item that some people may be allergic to. Please ask your waiter or waitress for assistance.";
+  var allergy_info = "This item may contain shellfish or another item that some people may be allergic to. Please ask your waiter or waitress for assistance.";
 $('.allergies-icon').hover(function () {
     $(this).append('<div class="allergy-info-box">' + '<div class="allergy-info-box-title">Allergies</div><br>' +  allergy_info + '</div>');
   }, function () {
@@ -48,9 +38,7 @@ $('.vegan-icon').hover(function () {
     $(this).append('<div class="vegan-info-box">' + '<div class="vegan-info-box-title">Vegan Option</div><br>' + vegan_info + '</div>');
   }, function () {
     $(this).find('div').remove();
-	});
-<<<<<<< HEAD
-=======
+  });
 
 
   $.getJSON(special, function (data) {
@@ -67,7 +55,6 @@ $('.vegan-icon').hover(function () {
 
 
 
->>>>>>> clean
 });
 // $.getJSON(special, function (data) {
 //   var special_id = data.menu_item_id;
@@ -82,25 +69,9 @@ $('.vegan-icon').hover(function () {
 //   }); 
 // });
 
-<<<<<<< HEAD
-_each(menus.entrees, function(a) {
-
-$.getJSON(special, function (data) {
-  var special_id = data.menu_item_id;
- _each(menu.entrees, function(a) {
-      if (a.id === special_id) {
-        $("#specialname").append( a.item + "..........." );
-        $("#specialprice").append( a.price );
-        $("#specialtwo").append( a.description );
-      }
-    });
-  }); 
-});
-=======
 // _.each(menu.entrees, function(a) {
 
 
->>>>>>> clean
 
 
 
@@ -109,11 +80,11 @@ $.getJSON(special, function (data) {
 
 // $.getJSON('http://restaurantapi.apiary.io/menu', function (data){
 
-// 	_.each(data.item, function(description){
-	
-// 		$('#box2').append( template(description) );
+//  _.each(data.item, function(description){
+  
+//    $('#box2').append( template(description) );
 
-//  	});
+//    });
 
 // });
 
@@ -123,11 +94,11 @@ $.getJSON(special, function (data) {
 
 // $.getJSON('http://restaurantapi.apiary.io/menu', function (data){
 
-// 	_.each(data.id, function(id){
-	
-// 		$('#box3').append( template(id) );
+//  _.each(data.id, function(id){
+  
+//    $('#box3').append( template(id) );
 
-//  	});
+//    });
 
 // });
 
