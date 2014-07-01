@@ -107,6 +107,9 @@ header {
       #news {
         @include span-columns(3.33 of 10);
         height: 300px;
+        @media (max-width:600px){
+          overflow:hidden;
+        }
         .news-title{
           @include titles;
           text-align:center;  
@@ -127,7 +130,6 @@ header {
         .special-title{
           @include titles;
           text-align:center;
-
         }
         #specialimage {
           width: 280px;
@@ -135,6 +137,11 @@ header {
           margin-top: 50px;
           overflow: hidden;
           text-align: center;
+          @media (max-width:600px){
+             max-width:100%;
+            max-height:100%;
+            overflow:scroll;
+          }
 
         }
         #specialone {
@@ -148,6 +155,11 @@ header {
             overflow: hidden;
             font-family: 'Sanchez', serif;
             color:grey;
+            @media (max-width:600px){
+              max-width:100%;
+              max-height:100%;
+              overflow:scroll;
+            }
            
           }
           #specialprice {
@@ -155,7 +167,10 @@ header {
             height: 30px;
             float: left;
             color:grey;
-
+            @media (max-width:600px){
+              max-width:100%;
+              max-height:100%;
+              overflow:scroll;
           }
         }
         #specialtwo {
@@ -163,10 +178,16 @@ header {
           height: 75px;
           overflow: hidden;
           font-size:12px;
+          @media (max-width:600px){
+            max-width:100%;
+            max-height:100%;
+            overflow:scroll;
+          }
 
         }
 
       }
+    }
       #location {
         @include span-columns(3.33 of 10);
         height: 300px;
@@ -272,9 +293,15 @@ header {
           img {
             margin: 20px;
             max-width: 100%;
+
           }
         }
       }
+          @media (max-width:600px){
+            #flickr{
+              display:none;
+            }
+        }
 
 footer {
   @include outer-container;
